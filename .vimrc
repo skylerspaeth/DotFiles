@@ -6,6 +6,7 @@
 "**********************************
 
 "Make vim pretty:
+set background=dark
 syntax on
 syntax sync minlines=20
 colorscheme PaperColor
