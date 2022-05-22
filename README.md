@@ -18,7 +18,7 @@ Or, if you don't have wget, with curl:
 Since curl will overwrite an existing file, make sure you don't care about anything in your current zshrc (if present).
 
 ## .zshrc
-![Zsh Prompt](/zsh.png)
+![Zsh Prompt](res/prompt.png)
 
 This RC really just contains a custom prompt. My zsh prompt shows your current git branch in brackets, if applicable, and changes the color of the `%` character to red if the previous command fails with a nonzero exit code.
 
