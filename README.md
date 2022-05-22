@@ -3,6 +3,20 @@ This repo contains the most important of my Linux and macOS dotfiles. Currently,
 - [`.zshrc`](#zshrc)
 - [`.vimrc`](#vimrc)
 
+## Installation
+If you'd like to install any of the RCs from this repo, simply wget the one you want. For instance for zshrc (from anywhere):
+```
+wget -P ~ https://raw.githubusercontent.com/skylerspaeth/DotFiles/master/.zshrc
+```
+Keep in mind wget will append a `.1` if the file already exists, so you'd need to rename accordingly.
+
+
+Or, if you don't have wget, with curl:
+```
+(cd ~ && curl -O https://raw.githubusercontent.com/skylerspaeth/DotFiles/master/.zshrc)
+```
+Since curl will overwrite an existing file, make sure you don't care about anything in your current zshrc (if present).
+
 ## .zshrc
 ![Zsh Prompt](/zsh.png)
 
