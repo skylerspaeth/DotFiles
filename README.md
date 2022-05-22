@@ -17,6 +17,11 @@ Or, if you don't have wget, with curl:
 ```
 Since curl will overwrite an existing file, make sure you don't care about anything in your current zshrc (if present).
 
+As a reminder, you'll need to `source` your shell RCs after making changes, like:
+```
+source ~/.zshrc
+```
+
 ## .zshrc
 ![Zsh Prompt](res/prompt.png)
 
