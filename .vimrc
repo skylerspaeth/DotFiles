@@ -11,11 +11,13 @@ syntax on
 syntax sync minlines=20
 colorscheme PaperColor
 
-"VimPlug is required for below to work:
-filetype plugin indent on
-call plug#begin()
-Plug 'chemzqm/vim-jsx-improve'
-call plug#end()
+"Install plugin(s) if VimPlug is setup
+if !empty(globpath(&rtp, 'autoload/plug.vim'))
+  filetype plugin indent on
+  call plug#begin()
+    Plug 'chemzqm/vim-jsx-improve'
+  call plug#end()
+endif
 
 "Language-specific customizations:
 "For Jenkinsfiles:
