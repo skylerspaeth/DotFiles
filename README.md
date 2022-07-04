@@ -4,7 +4,7 @@ This repo contains the most important of my Linux and macOS dotfiles. Currently,
 - [`.vimrc`](#vimrc)
 
 ## Installation
-If you'd like to install any of the RCs from this repo, simply wget the one you want. For instance for zshrc (from anywhere):
+If you'd like to install any of the RCs from this repo, simply wget the one you want. For instance, for zshrc (from anywhere):
 ```
 wget -P ~ https://raw.githubusercontent.com/skylerspaeth/DotFiles/master/.zshrc
 ```
