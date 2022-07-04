@@ -42,6 +42,7 @@ set belloff=all
 set number
 set nowrap
 set relativenumber
+set nohlsearch
 
 "Insert spaces when tab key is pressed, preventing
 "spaces from becoming tabs outside the editor:
