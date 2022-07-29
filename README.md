@@ -2,6 +2,7 @@
 This repo contains the most important of my Linux and macOS dotfiles. Currently, this includes:
 - [`.zshrc`](#zshrc)
 - [`.vimrc`](#vimrc)
+- [`autoexec.cfg`](#autoexeccfg)
 
 ## Installation
 If you'd like to install any of the RCs from this repo, simply wget the one you want. For instance, for zshrc (from anywhere):
@@ -34,5 +35,9 @@ The prompt uses the following format:
 username@[hostname] ~/path [branch] %
 ```
 Accent colors are added to the bracketed text (hostname & branch) to make the prompt more visually appealing.
+
 ## .vimrc
 I don't have much to say about this RC. It's literally just my vimrc, the way I like vim. One thing to note is that [Vim-Plug](https://github.com/junegunn/vim-plug) is required for vim to not error out on launch due to a plugin I'm importing. You can choose to omit this part from your RC, install Vim-Plug manually, or [add the installer to your vimrc](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation) to set it up automatically on any computer.
+
+## autoexec.cfg
+If you play CS:GO, having an autoexec is arguably just as important as a zsh or vimrc. This allows you to configure settings, binds, macros, etc. in one place and have it consistently replicated across different computers. Mine contains my crosshair, a jumpthrow bind, and a bunch of `say` binds.
