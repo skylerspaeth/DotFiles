@@ -1,3 +1,13 @@
+case `uname` in
+  Linux)
+    # Linux-specific commands
+    alias {start,open}="xdg-open"
+  ;;
+  Darwin)
+    # macOS-specific commands
+  ;;
+esac
+
 function __fast_git_branch() {
   local headfile head branch
   local dir="$PWD"
