@@ -16,6 +16,7 @@ if !empty(globpath(&rtp, 'autoload/plug.vim'))
   filetype plugin indent on
   call plug#begin()
     Plug 'chemzqm/vim-jsx-improve'
+    Plug 'ap/vim-css-color'
   call plug#end()
 endif
 
