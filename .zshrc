@@ -8,6 +8,9 @@ case `uname` in
   ;;
 esac
 
+alias tf="terraform"
+alias k="kubectl"
+
 function __fast_git_branch() {
   local headfile head branch
   local dir="$PWD"
