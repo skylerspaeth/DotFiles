@@ -43,6 +43,7 @@ set belloff=all
 set number
 set nowrap
 set relativenumber
+set cursorline
 set nohlsearch
 
 "Insert spaces when tab key is pressed, preventing
