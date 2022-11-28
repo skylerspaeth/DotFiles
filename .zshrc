@@ -8,6 +8,9 @@ case `uname` in
   ;;
 esac
 
+# make ^u delete left from cursor like in bash
+bindkey \^U backward-kill-line
+
 alias tf="terraform"
 alias k="kubectl"
 
