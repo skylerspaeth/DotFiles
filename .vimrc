@@ -74,4 +74,12 @@ if has('macunix')
     nnoremap + :vert res +5<CR>
     "shift + minus (_):
     nnoremap _ :vert res -5<CR>
+
+  "Font size override for MacVim:
+  set guifont=Menlo\ Regular:h18
+
 endif
+
+"Really delete (send contents to blackhole register)
+"from https://stackoverflow.com/a/3641942/3291472:
+nnoremap R "_d
