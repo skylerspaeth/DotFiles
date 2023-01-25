@@ -21,11 +21,16 @@ if !empty(globpath(&rtp, 'autoload/plug.vim'))
 endif
 
 "Language-specific customizations:
+"For Terraform:
+function Tfmt()
+  execute '%!terraform fmt -no-color -'
+endfunction
+
 "For Jenkinsfiles:
-au BufNewFile,BufRead Jenkinsfile setf groovy
+autocmd BufNewFile,BufRead Jenkinsfile setf groovy
 
 "For *.hbs:
-au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html
+autocmd BufNewFile,BufRead *.handlebars,*.hbs set filetype=html
 
 "For *.js:
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
@@ -83,3 +88,11 @@ endif
 "Really delete (send contents to blackhole register)
 "from https://stackoverflow.com/a/3641942/3291472:
 nnoremap R "_d
+
+"Bind F2 to refresh syntax highlighting
+map <F2> :syntax sync fromstart<CR>
+syntax sync fromstart
+
+"Make fold views save and load automatically
+autocmd BufWinLeave *.*,Jenkinsfile mkview
+autocmd BufWinEnter *.*,Jenkinsfile silent loadview
