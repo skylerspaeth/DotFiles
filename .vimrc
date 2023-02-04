@@ -5,6 +5,10 @@
 
 "**********************************
 
+"Use normal backspace behavior:
+set nocompatible
+set backspace=2
+
 "Make vim pretty:
 set background=dark
 syntax on
