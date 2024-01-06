@@ -2,6 +2,10 @@ case `uname` in
   Linux)
     # Linux-specific commands
     alias {start,open}="xdg-open"
+
+    # Allow alt + L/R arrow to jump words like on mac
+    bindkey "^[[1;3C" forward-word
+    bindkey "^[[1;3D" backward-word
   ;;
   Darwin)
     # macOS-specific commands
@@ -11,8 +15,8 @@ esac
 # make ^u delete left from cursor like in bash
 bindkey \^U backward-kill-line
 
-alias tf="terraform"
-alias k="kubectl"
+command -v terraform && alias tf="terraform"
+command -v kubectl && alias k="kubectl"
 
 function __fast_git_branch() {
   local headfile head branch
