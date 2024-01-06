@@ -15,8 +15,8 @@ esac
 # make ^u delete left from cursor like in bash
 bindkey \^U backward-kill-line
 
-command -v terraform && alias tf="terraform"
-command -v kubectl && alias k="kubectl"
+command -v terraform &>> /dev/null && alias tf="terraform"
+command -v kubectl &>> /dev/null && alias k="kubectl"
 
 function __fast_git_branch() {
   local headfile head branch
