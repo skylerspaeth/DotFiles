@@ -18,6 +18,8 @@ bindkey \^U backward-kill-line
 command -v terraform &>> /dev/null && alias tf="terraform"
 command -v kubectl &>> /dev/null && alias k="kubectl"
 
+export PATH="$HOME/.tfenv/bin:$PATH"
+
 function __fast_git_branch() {
   local headfile head branch
   local dir="$PWD"
