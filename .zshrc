@@ -6,6 +6,12 @@ case `uname` in
     # Allow alt + L/R arrow to jump words like on mac
     bindkey "^[[1;3C" forward-word
     bindkey "^[[1;3D" backward-word
+
+    # avoid constantly needing to type ssh passkey when gitting
+    if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
+      eval $(ssh-agent -s) > /dev/null
+    fi
+    keychain --nogui $HOME/.ssh/id_ed25519 &> /dev/null
   ;;
   Darwin)
     # macOS-specific commands
