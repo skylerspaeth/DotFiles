@@ -1,3 +1,5 @@
+export GOPATH=$HOME/go
+
 case `uname` in
   Linux)
     # Linux-specific commands
@@ -12,6 +14,7 @@ esac
 bindkey \^U backward-kill-line
 
 alias tf="terraform"
+alias tind='docker run --network host -v $HOME/docker.terraform.d/:/root/.terraform.d -v $(git rev-parse --show-toplevel):/app --rm -it -w /app/$(git rev-parse --show-prefix) -v $HOME/.aws:/root/.aws --env AWS_PROFILE=$AWS_PROFILE --env AWS_DEFAULT_PROFILE=$AWS_DEFAULT_PROFILE tfwaws:1.4.0'
 alias k="kubectl"
 
 function __fast_git_branch() {
@@ -38,3 +41,4 @@ function __fast_git_branch() {
 
 setopt PROMPT_SUBST
 PROMPT='%n@[%F{098}%m%f] %~ $(__fast_git_branch)%(?.%%.%F{196}%%%f) '
+export PATH="$HOME/.bin:$PATH"
