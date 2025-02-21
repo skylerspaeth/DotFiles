@@ -138,8 +138,5 @@ autocmd BufWinEnter *.*,Jenkinsfile silent loadview
 "Disable autocommenting when on another comment line (helpful for shebang)
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
-"Why do I randomly need this?
-set backspace=2
-
 "Register length fix
 set viminfo='20,<1000
