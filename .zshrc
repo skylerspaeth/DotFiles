@@ -30,8 +30,6 @@ command -v terraform &>> /dev/null && alias tf="terraform"
 # kubectl
 command -v kubectl &>> /dev/null && alias k="kubectl"
 
-export PATH="$HOME/.tfenv/bin:$PATH"
-
 function __fast_git_branch() {
   local headfile head branch
   local dir="$PWD"
@@ -44,7 +42,7 @@ function __fast_git_branch() {
   if [ -e "$headfile" ]; then
     read -r head < "$headfile" || return
     case "$head" in
-      ref:*) branch="${head##*/}" ;;
+      ref:*) branch="${head#*refs/heads/}" ;;
       "") branch="" ;;
       *) branch="${head:0:7}" ;;  #Detached head. You can change the format for this too.
     esac
@@ -56,4 +54,4 @@ function __fast_git_branch() {
 
 setopt PROMPT_SUBST
 PROMPT='%n@[%F{098}%m%f] %~ $(__fast_git_branch)%(?.%%.%F{196}%%%f) '
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.tfenv/bin:$PATH"
